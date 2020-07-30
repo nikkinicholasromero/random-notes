@@ -1,0 +1,21 @@
+PostgreSQL
+
+Open psql
+
+show databases
+\l
+
+create database 
+create database <database_name>
+
+connect to a database
+\c
+
+show tables
+\dt
+
+describe tables
+\d+ <table_name>
+
+quit
+\q

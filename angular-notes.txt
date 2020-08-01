@@ -37,3 +37,15 @@ Style Binding
 NgModel
 	<label for="example-ngModel">[(ngModel)]:</label>
 	<input [(ngModel)]="currentItem.name" id="example-ngModel">
+
+Forms
+	Reactive
+	Template-Driven
+
+	FormControl
+	FormGroup
+	FormArray
+	ControlValueAccessor
+
+	
+

@@ -5,3 +5,35 @@ ng generate class {class-name}
 ng generate moudle {module-name}
 ng serve
 ng test
+
+Directives
+	- Attribute directives
+		 - NgClass
+		 - NgStyle
+		 - NgModel
+	- Structural directives
+
+NgClass
+	<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div> <-- Single
+	<div [ngClass]="{'special':true}">This div is special</div> <-- Multiple
+Class Binding
+	<div [class.special]="isSpecial">This div is special</div> <-- Single
+	<div [class]="{'special':true}">This div is special</div> <-- Multiple
+
+NgStyle
+	this.currentStyles = {
+		'font-style':  this.canSave      ? 'italic' : 'normal',
+		'font-weight': !this.isUnchanged ? 'bold'   : 'normal',
+		'font-size':   this.isSpecial    ? '24px'   : '12px'
+	};
+	<div [ngStyle]="currentStyles">
+		 div is initially italic, normal weight, and extra large (24px).
+	</div>
+Style Binding
+	<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+		This div is x-large or smaller.
+	</div>
+
+NgModel
+	<label for="example-ngModel">[(ngModel)]:</label>
+	<input [(ngModel)]="currentItem.name" id="example-ngModel">
